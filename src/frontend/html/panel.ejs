@@ -1,0 +1,1074 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/output.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+  
+</head>
+<body>
+
+    <%- include('partials/window') %>
+        <!-- İçerik Kısmı -->
+
+<!-- İçerik Kısmı -->
+<main class="flex-1 w-full relative py-12 overflow-y-auto bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] min-h-screen flex flex-col">
+    <div class="py-8 px-6 mx-auto max-w-screen-xl text-center lg:py-16 flex-1">
+        <div class="py-2 px-1 mx-auto text-center relative bg-white dark:bg-gray-900 flex-1">
+         
+
+            
+	
+<div class="py-2 flex items-center justify-center relative">
+
+                <!-- Başarı Mesajı -->
+<div id="toast-success" class="hidden fixed  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 flex items-center w-full max-w-xs p-5 mb-4 text-green-500 bg-green rounded-lg shadow dark:text-green-400 dark:bg-gray-900"  role="alert">
+    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+        </svg>
+        <span class="sr-only">Check icon</span>
+    </div>
+    <div class="ms-3 text-sm font-normal">Başarılı uyarı işlemi.</div>
+    <button type="button" onclick="closeToast('toast-success')" class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+        </svg>
+    </button>
+</div>
+
+<!-- Başarısızlık Mesajı -->
+<div id="toast-danger" class="hidden fixed top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 flex items-center w-full max-w-xs p-5 mb-4 text-red-500 bg-red rounded-lg shadow dark:text-red-400 dark:bg-gray-900" role="alert">
+    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"/>
+        </svg>
+        <span class="sr-only">Error icon</span>
+    </div>
+    <div class="ms-3 text-sm font-normal">Başarısız uyarı işlemi.</div>
+    <button type="button" onclick="closeToast('toast-danger')" class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+        </svg>
+    </button>
+</div>
+
+ 
+<!-- Main modal -->
+<div id="register-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-auto bg-black bg-opacity-50">
+  
+	<div class="relative p-4 w-full max-w-5xl h-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Düzenleme
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="register-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+			
+			<!-- Modal body -->
+<div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+    <form class="space-y-4" id="student-register" enctype="multipart/form-data">
+        <!-- Fotoğraf ve T.C. Kimlik No -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="photo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fotoğraf</label>
+				<input  type="file" name="photo" id="photo" class="block w-full text-sm text-slate-500
+				  file:mr-4 file:py-2 file:px-4
+				  file:rounded-full file:border-0
+				  file:text-sm file:font-semibold
+				  file:bg-violet-50 file:text-violet-700
+				  hover:file:bg-violet-100
+				"  required/>
+			</div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tc" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">T.C. Kimlik No</label>
+                <input type="text" name="tc" id="tc" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- İsim ve Soyisim -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">İsim</label>
+                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="surname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Soyisim</label>
+                <input type="text" name="surname" id="surname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- E-posta ve Telefon Numarası -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-posta</label>
+                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefon Numarası</label>
+                <input type="text" name="tel" id="tel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Staj Başlangıç ve Bitiş Tarihleri -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="startDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Başlangıç Tarihi</label>
+                <input type="date" name="startDate" id="startDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="endDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Bitiş Tarihi</label>
+                <input type="date" name="endDate" id="endDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Durum ve Gün -->
+        <div class="flex items-center justify-center">
+            <div class="px-12 py-2 w-1/2">
+                <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Durum</label>
+                <select name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                    <option value="active">Aktif</option>
+                    <option value="inactive">Pasif</option>
+                </select>
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="days" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kaç Gün</label>
+                <input type="number" name="days" id="days" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+            <!-- Şifre -->
+    <div class="flex items-center justify-center">
+        <div class="px-8 py-2 w-1/2">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Şifre</label>
+            <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+        </div>
+    </div>
+    </div>
+
+        <div class="flex items-center justify-center py-2 px-12">
+			
+            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Kaydet
+       </button> 
+       </div>
+    </form>
+
+			
+			
+
+			      
+        </div>
+	
+	
+        <!-- edit section -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+               
+			<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 py-4">Önizleme</h3>
+			
+			 <div class="w-full border-t border-gray-200 dark:border-gray-600"></div>
+             <div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+			<div class="py-4 w-full flex flex-col items-center space-y-4">
+			
+
+    <div class="w-24 h-24 rounded-full overflow-hidden">
+        <img id="preview-photo" class="w-full h-full object-cover" src="../img/pp.png" alt="pp" />
+    </div>
+    <div class="flex flex-col items-center">
+        <span id="preview-name" class="text-xl font-bold text-gray-900 dark:text-white"></span>
+        <span id="preview-surname" class="text-lg text-gray-700 dark:text-gray-300"></span>
+        <span id="preview-tc" class="text-gray-700 dark:text-gray-300"></span>
+    </div>
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+    
+    <!-- E-posta ve Telefon Numarası satırı -->
+    <div class="w-full flex justify-around text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>E-posta</span>
+            <span id="preview-email" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Telefon Numarası&nbsp;</span>
+            <span id="preview-tel" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <!-- Başlangıç ve Bitiş Tarihleri satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Başlangıç</span>
+            <span id="preview-startDate" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Bitiş</span>
+            <span id="preview-endDate" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <!-- Durum ve Gün satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Durum</span>
+            <span id="preview-status" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Gün</span>
+            <span id="preview-days" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+	
+				
+			</div>
+
+			
+			</div>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Profile modal -->
+        <div id="profile-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-auto bg-black bg-opacity-50">
+  
+            <div class="relative p-4 w-full max-w-5xl h-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                <!-- Modal content -->
+                <div class="py-2 bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Profil Ayarları
+                        </h3>
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-red-600 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-red-600 dark:hover:text-white" data-modal-hide="profile-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+        
+                    
+                    <!-- profil modal -->
+        <div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+            <!-- enctype="multipart/form-data"-->
+            <form  id="profile-update" enctype="multipart/form-data" >
+                <!-- Fotoğraf ve kullanıcı adı-->
+                <div class="flex items-center justify-center">
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-photo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fotoğraf</label>
+                        <input  type="file" name="profile-photo" id="profile-photo" class="block w-full text-sm text-slate-500
+                          file:mr-4 file:py-2 file:px-4
+                          file:rounded-full file:border-0
+                          file:text-sm file:font-semibold
+                          file:bg-violet-50 file:text-violet-700
+                          hover:file:bg-violet-100
+                        " />
+                    </div>
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-user-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kullanıcı Adı</label>
+                        <input type="text" name="profile-user-name" id="profile-user-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+                    </div>
+                </div>
+        
+                <!-- İsim ve Soyisim -->
+                <div class="flex items-center justify-center">
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">İsim</label>
+                        <input type="text" name="profile-name" id="profile-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+                    </div>
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-surname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Soyisim</label>
+                        <input type="text" name="profile-surname" id="profile-surname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+                    </div>
+                </div>
+        
+                <!-- E-posta ve şifre -->
+                <div class="flex items-center justify-center">
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-posta</label>
+                        <input type="email" name="profile-email" id="profile-email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+                    </div>
+                    <div class="px-8 py-2 w-1/2">
+                        <label for="profile-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Şifre</label>
+                        <input type="text" name="profile-password" id="profile-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+                    </div>
+                </div>
+        
+            </div>
+                <div class="flex items-center justify-center py-2 px-12">
+                    
+                    <button id="save-profile-button" type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          Kaydet
+               </button> 
+            </div>
+               
+            </form>
+
+        
+                    
+                    
+
+                          
+                </div>
+            
+            
+                <!-- Preview section -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+                       
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 py-4">Önizleme</h3>
+                    
+                     <div class="w-full border-t border-gray-200 dark:border-gray-600"></div>
+            <div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+                    <div class="py-4 w-full flex flex-col items-center space-y-4">
+                    
+        
+            <div class="w-24 h-24 rounded-full overflow-hidden">
+                <img id="preview-profile-photo" class="w-full h-full object-cover"  alt="pp" />
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="preview-profile-name" class="text-xl font-bold text-gray-900 dark:text-white">*******</span>
+                <span id="preview-profile-surname" class="text-lg text-gray-700 dark:text-gray-300">*********</span>
+                <span id="preview-profile-user-name" class="text-gray-700 dark:text-gray-300">***********</span>
+            </div>
+            <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+            
+            <!-- E-posta ve Şifre satırı -->
+            <div class="w-full flex justify-around text-gray-900 dark:text-white">
+                <div class="flex flex-col items-center w-1/2">
+                    <span>E-posta</span>
+                    <span id="preview-profile-email" class="text-gray-700 dark:text-gray-300">*****************</span>
+                </div>
+                <div class="flex flex-col items-center w-1/2">
+                    <span>Şifre&nbsp;</span>
+                    <span id="preview-profile-password" class="text-gray-700 dark:text-gray-300">***********</span>
+                </div>
+            </div>	
+                    </div>
+                    </div>
+                    <div class="flex items-center justify-center py-2 px-12">
+                    <a href="/auth/logout">
+
+                        <button  type="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                            Çıkış yap
+                 </button> 
+                    </a>
+
+                </div>
+        
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+
+<!-- edit modal -->
+<div id="edit-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-auto bg-black bg-opacity-50">
+  
+	<div class="relative p-4 w-full max-w-5xl h-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Kayıt Formu
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="edit-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+			
+			<!-- Modal body -->
+<div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+    <form class="space-y-4" id="student-edit" enctype="multipart/form-data">
+        <!-- Fotoğraf ve T.C. Kimlik No -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="photo-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fotoğraf</label>
+				<input  type="file" name="photo-edit" id="photo-edit" class="block w-full text-sm text-slate-500
+				  file:mr-4 file:py-2 file:px-4
+				  file:rounded-full file:border-0
+				  file:text-sm file:font-semibold
+				  file:bg-violet-50 file:text-violet-700
+				  hover:file:bg-violet-100
+				"  required/>
+			</div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tc-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">T.C. Kimlik No</label>
+                <input type="text" name="tc-edit" id="tc-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- İsim ve Soyisim -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="name-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">İsim</label>
+                <input type="text" name="name-edit" id="name-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="surname-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Soyisim</label>
+                <input type="text" name="surname-edit" id="surname-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- E-posta ve Telefon Numarası -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="email-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-posta</label>
+                <input type="email" name="email-edit" id="email-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tel-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefon Numarası</label>
+                <input type="text" name="tel-edit" id="tel-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Staj Başlangıç ve Bitiş Tarihleri -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="startDate-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Başlangıç Tarihi</label>
+                <input type="date" name="startDate-edit" id="startDate-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="endDate-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Bitiş Tarihi</label>
+                <input type="date" name="endDate-edit" id="endDate-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Durum ve Gün -->
+        <div class="flex items-center justify-center">
+            <div class="px-12 py-2 w-1/2">
+                <label for="status-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Durum</label>
+                <select name="status-edit" id="status-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                    <option value="active">Aktif</option>
+                    <option value="inactive">Pasif</option>
+                </select>
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="days-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kaç Gün</label>
+                <input type="number" name="days-edit" id="days-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+            <!-- Şifre -->
+    <div class="flex items-center justify-center">
+        <div class="px-8 py-2 w-1/2">
+            <label for="password-edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Şifre</label>
+            <input type="password" name="password-edit" id="password-edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+        </div>
+    </div>
+    </div>
+
+        <div class="flex items-center justify-center py-2 px-12">
+			
+            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Kaydet
+       </button> 
+       </div>
+    </form>
+
+			
+			
+
+			      
+        </div>
+	
+	
+        <!-- Preview section -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+               
+			<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 py-4">Önizleme</h3>
+			
+			 <div class="w-full border-t border-gray-200 dark:border-gray-600"></div>
+             <div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+			<div class="py-4 w-full flex flex-col items-center space-y-4">
+			
+
+    <div class="w-24 h-24 rounded-full overflow-hidden">
+        <img id="preview-photo-edit" class="w-full h-full object-cover" src="../img/pp.png" alt="pp" />
+    </div>
+    <div class="flex flex-col items-center">
+        <span id="preview-name-edit" class="text-xl font-bold text-gray-900 dark:text-white"></span>
+        <span id="preview-surname-edit" class="text-lg text-gray-700 dark:text-gray-300"></span>
+        <span id="preview-tc-edit" class="text-gray-700 dark:text-gray-300"></span>
+    </div>
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+    
+    <!-- E-posta ve Telefon Numarası satırı -->
+    <div class="w-full flex justify-around text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>E-posta</span>
+            <span id="preview-email-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Telefon Numarası&nbsp;</span>
+            <span id="preview-tel-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <!-- Başlangıç ve Bitiş Tarihleri satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Başlangıç</span>
+            <span id="preview-startDate-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Bitiş</span>
+            <span id="preview-endDate-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <!-- Durum ve Gün satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Durum</span>
+            <span id="preview-status-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Gün</span>
+            <span id="preview-days-edit" class="text-gray-700 dark:text-gray-300"></span>
+        </div>
+    </div>
+    
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+	
+				
+			</div>
+
+			
+			</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        İSİM
+                        <button onclick="sortTable('name')" class="sort-button">🔼🔽</button>
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        TARİH
+                        <button onclick="sortTable('startDate')" class="sort-button">🔼🔽</button>
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Staj günü
+                        <button onclick="sortTable('days')" class="sort-button">🔼🔽</button>
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        Durum
+                        <button onclick="sortTable('status')" class="sort-button">🔼🔽</button>
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
+                        <div class="py-2 flex items-center justify-center relative">
+                            <button data-modal-target="register-modal" data-modal-toggle="register-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                Yeni Kayıt
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="student-tbody" class="overflow-y-auto max-h-[60vh]">
+                <% students.forEach(student => { %>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+
+                        <% if (student.photo) { %>
+                            <%
+                                // Buffer'ı base64 formatına çevir
+                                var photoBase64 = student.photo.toString('base64');
+                                var photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
+                            %>
+                            <img class="w-10 h-10 rounded-full" src="<%= photoDataUrl %>" alt="<%= student.firstName %> image">
+                        <% } else { %>
+                            <img class="w-10 h-10 rounded-full" src="/img/pp.png" alt="<%= student.firstName %> image">
+                        <% } %>
+                        
+                        <div class="ps-3">
+                            <div class="text-base font-semibold"><%= student.firstName %> <%= student.lastName %>&nbsp;</div>
+                            <div class="font-normal text-gray-500"><%= student.tc %>&nbsp;</div>
+                        </div>
+                    </th>
+                    <td class="px-6 py-4 text-center" data-date="<%= student.startDate %>">
+                        <%= student.startDate ? new Date(student.startDate).toLocaleDateString() : '' %>
+                        <div></div>
+                        <%= student.endDate ? new Date(student.endDate).toLocaleDateString() : '' %>
+                    </td>
+                    
+                    <td class="px-6 py-4 text-center"><%= student.days %> gün</td>
+                    <td class="px-6 py-4">
+                        <% if (student.status === 'active') { %>
+                            <div class="flex items-center justify-center">
+                                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                                Devam ediyor
+                            </div>
+                        <% } else { %>
+                            <div class="flex items-center justify-center">
+                                <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
+                                Bitirdi
+                            </div>
+                        <% } %>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <a data-id="<%= student._id %>" href="/auth/students/<%= student._id %>" id="edit-link" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Düzenle&nbsp;</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+        
+    </table>
+		</div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+<script>
+
+    //dom yüklenince çalışan event
+    document.addEventListener('DOMContentLoaded', () => {
+
+        //kayıt modalı
+        const modalToggle = document.querySelector('[data-modal-toggle="register-modal"]');
+        const modal = document.getElementById('register-modal');
+        const closeModalButton = modal.querySelector('[data-modal-hide="register-modal"]');
+
+        modalToggle.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        //profil modali
+        const modalProfileToggle = document.querySelector('[data-modal-toggle="profile-modal"]');
+        const modalProfile = document.getElementById('profile-modal');
+        const closeModalProfileButton = modalProfile.querySelector('[data-modal-hide="profile-modal"]');
+
+        modalProfileToggle.addEventListener('click', () => {
+            modalProfile.classList.remove('hidden');// hidden nesneyi gizleyen tailwind css özelliği
+        });
+
+        closeModalProfileButton.addEventListener('click', () => {
+            modalProfile.classList.add('hidden');
+        });
+});
+
+
+
+
+      
+
+
+
+    //ön izleme fonsiyonu
+    function updateRegisterPreview() {
+        // Fotoğraf
+        const photoInput = document.getElementById('photo');
+        const previewPhoto = document.getElementById('preview-photo');
+        if (photoInput.files && photoInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewPhoto.src = e.target.result;
+            }
+            reader.readAsDataURL(photoInput.files[0]);
+        }
+
+        // Diğer alanların
+        document.getElementById('preview-name').textContent = document.getElementById('name').value;
+        document.getElementById('preview-surname').textContent = document.getElementById('surname').value;
+        document.getElementById('preview-email').textContent = document.getElementById('email').value;
+        document.getElementById('preview-tc').textContent = document.getElementById('tc').value;
+        document.getElementById('preview-tel').textContent = document.getElementById('tel').value;
+        document.getElementById('preview-startDate').textContent = document.getElementById('startDate').value;
+        document.getElementById('preview-endDate').textContent = document.getElementById('endDate').value;
+        document.getElementById('preview-status').textContent = document.getElementById('status').value;
+        document.getElementById('preview-days').textContent = document.getElementById('days').value;
+    }
+
+    
+
+    // eventler
+    document.getElementById('photo').addEventListener('change', updateRegisterPreview);
+    document.getElementById('name').addEventListener('input', updateRegisterPreview);
+    document.getElementById('surname').addEventListener('input', updateRegisterPreview);
+    document.getElementById('email').addEventListener('input', updateRegisterPreview);
+    document.getElementById('tc').addEventListener('input', updateRegisterPreview);
+    document.getElementById('tel').addEventListener('input', updateRegisterPreview);
+    document.getElementById('startDate').addEventListener('input', updateRegisterPreview);
+    document.getElementById('endDate').addEventListener('input', updateRegisterPreview);
+    document.getElementById('status').addEventListener('input', updateRegisterPreview);
+    document.getElementById('days').addEventListener('input', updateRegisterPreview);
+ 
+    
+    //profile ön izleme formdaki değişikliğe göre
+    function updateProfilePreview() {
+        // Fotoğraf önizleme
+        const photoInput = document.getElementById('profile-photo');
+        const previewPhoto = document.getElementById('preview-profile-photo');
+        if (photoInput.files && photoInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewPhoto.src = e.target.result;
+            }
+            reader.readAsDataURL(photoInput.files[0]);
+        }
+
+        // Diğer alanların önizlemesi
+        document.getElementById('preview-profile-name').textContent = document.getElementById('profile-name').value;
+        document.getElementById('preview-profile-surname').textContent = document.getElementById('profile-surname').value;
+        document.getElementById('preview-profile-email').textContent = document.getElementById('profile-email').value;
+        document.getElementById('preview-profile-user-name').textContent = document.getElementById('profile-user-name').value;
+        document.getElementById('preview-profile-password').textContent = document.getElementById('profile-password').value;
+
+    }
+
+    // formdaki kısımların değişmesini event olarak aktifleştiriyoruz
+    document.getElementById('profile-photo').addEventListener('change', updateProfilePreview);
+    document.getElementById('profile-name').addEventListener('input', updateProfilePreview);
+    document.getElementById('profile-surname').addEventListener('input', updateProfilePreview);
+    document.getElementById('profile-email').addEventListener('input', updateProfilePreview);
+    document.getElementById('profile-user-name').addEventListener('input', updateProfilePreview);
+    document.getElementById('profile-password').addEventListener('input', updateProfilePreview);
+
+
+    //veri tabanındaki bilgiler
+    document.addEventListener('DOMContentLoaded', function() {
+                     
+    const profilePhoto = "<%= user2.photo ? 'data:image/jpeg;base64,' + user2.photo.toString('base64') : '../img/pp.png' %>";
+      const profileName = "<%= user2.name || '' %>";
+      const profileSurname = "<%= user2.surname || '' %>";
+      const profileEmail = "<%= user2.email || '' %>";
+      const profileUsername = "<%= user2.username || '' %>";
+      const profilePassword = "<%= user2.password || '' %>";
+
+
+        // Fotoğraf önizleme
+        const previewPhoto1 = document.getElementById('preview-profile-photo');
+        previewPhoto1.src = profilePhoto;
+
+        // Form elemanlarına değerleri atama
+        document.getElementById('profile-name').value = profileName;
+        document.getElementById('profile-surname').value = profileSurname;
+        document.getElementById('profile-email').value = profileEmail;
+        document.getElementById('profile-user-name').value = profileUsername;
+        document.getElementById('profile-password').value = profilePassword;
+
+        document.getElementById('preview-profile-name').textContent = profileName;
+        document.getElementById('preview-profile-surname').textContent = profileSurname;
+        document.getElementById('preview-profile-email').textContent = profileEmail;
+        document.getElementById('preview-profile-user-name').textContent = profileUsername;
+        document.getElementById('preview-profile-password').textContent = profilePassword;
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const editLink = document.getElementById('edit-link');
+    const modalProfile = document.getElementById('edit-modal');
+
+    // Öğrenci verilerini AJAX ile çekme
+    editLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const studentId = link.getAttribute('data-id');
+
+            fetch(`/auth/students/${studentId}`) // Sunucudan veriyi çeken endpoint
+                .then(response => response.json())
+                .then(student => {
+                    if (!student) {
+                        console.error('Öğrenci bulunamadı.');
+                        return;
+                    }
+
+                    // Modal içindeki alanları dolduruyoruz
+                    document.getElementById('name-edit').value = student.name || '';
+                    document.getElementById('surname-edit').value = student.surname || '';
+                    document.getElementById('email-edit').value = student.email || '';
+                    document.getElementById('tc-edit').value = student.tc || '';
+                    document.getElementById('tel-edit').value = student.tel || '';
+                    document.getElementById('startDate-edit').value = student.startDate || '';
+                    document.getElementById('endDate-edit').value = student.endDate || '';
+                    document.getElementById('status-edit').value = student.status || '';
+                    document.getElementById('days-edit').value = student.days || '';
+                    document.getElementById('password').value = student.password || '';
+
+                    // Fotoğraf önizleme
+                    const previewPhoto = document.getElementById('preview-photo-edit');
+                    previewPhoto.src = student.photo ? `data:image/jpeg;base64,${student.photo}` : '../img/pp.png';
+
+                    // Preview alanlarını dolduruyoruz
+                    document.getElementById('preview-name-edit').textContent = student.name || '';
+                    document.getElementById('preview-surname-edit').textContent = student.surname || '';
+                    document.getElementById('preview-email-edit').textContent = student.email || '';
+                    document.getElementById('preview-tc-edit').textContent = student.tc || '';
+                    document.getElementById('preview-tel-edit').textContent = student.tel || '';
+                    document.getElementById('preview-startDate-edit').textContent = student.startDate || '';
+                    document.getElementById('preview-endDate-edit').textContent = student.endDate || '';
+                    document.getElementById('preview-status-edit').textContent = student.status || '';
+                    document.getElementById('preview-days-edit').textContent = student.days || '';
+                    document.getElementById('preview-password').textContent = student.password || '';
+
+                    // Modal'i açıyoruz
+                    modalProfile.classList.remove('hidden');
+                })
+                .catch(error => console.error('Veri çekme hatası:', error));
+        });
+    });
+
+    // Modalı kapatma
+    document.getElementById('close-edit-modal').addEventListener('click', () => {
+        modalProfile.classList.add('hidden');
+    });
+});
+
+</script>	
+
+
+
+<script>
+document.getElementById('student-register').addEventListener('submit', function(event) {
+    event.preventDefault(); // Formun sayfayı yeniden yüklemesini önler
+
+    const formData = new FormData(this);
+
+    fetch('/auth/student-register', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            showToast('toast-success'); // Başarılı mesajını göster
+         // Sayfayı yeniden yükle
+         window.location.reload();
+        } else {
+            showToast('toast-danger'); // Başarısız mesajını göster
+        }
+    })
+    .catch(error => {
+        console.error('Hata:', error);
+        showToast('toast-danger'); // Başarısız mesajını göster
+    });
+});
+
+// Toast mesajını gösteren fonksiyon
+function showToast(id) {
+    const toast = document.getElementById(id);
+    toast.classList.remove('hidden'); // Toast görünür yap
+
+    //Kayıt modalı
+    const modal = document.getElementById('register-modal');
+    modal.classList.add('hidden');
+
+    // Toast'u otomatik olarak kapat
+    setTimeout(() => {
+        toast.classList.add('hidden');
+    }, 5000); // 3 saniye sonra kapanır
+}
+
+// Toast kapatma butonu için fonksiyon
+function closeToast(id) {
+    document.getElementById(id).classList.add('hidden');
+}
+
+
+</script>
+
+
+<script>
+    document.getElementById('profile-update').addEventListener('submit', function(event) {
+        event.preventDefault(); // Formun sayfayı yeniden yüklemesini önler
+    
+        const formData = new FormData(this);
+    
+        fetch('/auth/profile-update', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                showToast('toast-success'); // Başarılı mesajını göster
+            // Toast'u otomatik olarak kapat
+            setTimeout(() => {
+                // Sayfayı yeniden yükle
+                window.location.reload();
+            }, 5000); // 3 saniye sonra kapanır
+             
+             
+            } else {
+                showToast('toast-danger'); // Başarısız mesajını göster
+            }
+        })
+        .catch(error => {
+            console.error('Hata:', error);
+            showToast('toast-danger'); // Başarısız mesajını göster
+        });
+    });
+    
+    // Toast mesajını gösteren fonksiyon
+    function showToast(id) {
+        const toast = document.getElementById(id);
+        toast.classList.remove('hidden'); // Toast görünür yap
+    
+        //Kayıt modalı
+        const modal = document.getElementById('profile-modal');
+        modal.classList.add('hidden');
+    
+        // Toast'u otomatik olarak kapat
+        setTimeout(() => {
+            toast.classList.add('hidden');
+        }, 5000); // 3 saniye sonra kapanır
+    }
+    
+    // Toast kapatma butonu için fonksiyon
+    function closeToast(id) {
+        document.getElementById(id).classList.add('hidden');
+    }
+    
+    
+    </script>
+  
+
+
+  <script>
+
+
+
+
+// Sıralama durumunu takip eden değişkenler
+let currentSortColumn = '';
+let currentSortOrder = 'asc';
+
+// Tablodaki verileri sıralama fonksiyonu
+function sortTable(column) {
+    const tbody = document.getElementById('student-tbody');
+    const rows = Array.from(tbody.getElementsByTagName('tr'));
+
+    // Eğer aynı kolona tıklanırsa sıralama yönünü değiştir
+    if (currentSortColumn === column) {
+        currentSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
+    } else {
+        // Farklı bir kolon seçilirse varsayılan olarak artan sırayla başlat
+        currentSortOrder = 'asc';
+    }
+
+    // Mevcut sıralama kolonunu güncelle
+    currentSortColumn = column;
+
+    // tıklanan kolonu belirleme ve sıralama
+    rows.sort((a, b) => {
+        const aData = getColumnData(a, column);
+        const bData = getColumnData(b, column);
+
+        if (column === 'startDate') {
+            // ISO 8601 tarih formatında
+            const aDate = new Date(aData);
+            const bDate = new Date(bData);
+            return currentSortOrder === 'asc' ? aDate - bDate : bDate - aDate;
+        } else if (column === 'days') {
+            // Sayısal değer için sıralama
+            return currentSortOrder === 'asc' ? parseInt(aData) - parseInt(bData) : parseInt(bData) - parseInt(aData);
+        } else {
+            // Metin sıralaması
+            return currentSortOrder === 'asc' ? aData.localeCompare(bData) : bData.localeCompare(aData);
+        }
+    });
+
+    // Sıralanmış verileri tabloya geri ekle
+    rows.forEach(row => tbody.appendChild(row));
+
+    // Butonların yönünü değiştir
+    updateSortIcons(column, currentSortOrder);
+}
+
+// Seçilen kolona göre veriyi alır
+function getColumnData(row, column) {
+    switch (column) {
+        case 'name':
+            return row.querySelector('th .text-base').textContent.trim();
+        case 'startDate':
+            return row.querySelector('td:nth-child(2)').getAttribute('data-date'); // Tarih data attribute üzerinden alınır
+        case 'days':
+            return row.querySelector('td:nth-child(3)').textContent.trim().split(' ')[0];
+        case 'status':
+            return row.querySelector('td:nth-child(4)').textContent.trim();
+        default:
+            return '';
+    }
+}
+
+// Buton simgelerini güncelleme fonksiyonu
+function updateSortIcons(column, order) {
+    const buttons = document.querySelectorAll('.sort-button');
+    buttons.forEach(button => {
+        if (button.getAttribute('onclick').includes(column)) {
+            button.textContent = order === 'asc' ? '🔼' : '🔽';
+        } else {
+            button.textContent = '🔼🔽'; // Diğer kolonların butonları varsayılan
+        }
+    });
+}
+
+
+
+// Sütun başlıklarına tıklama  eventi
+document.addEventListener('DOMContentLoaded', () => {
+    // Sütun başlıklarını seçıp evente ekliyoruz 
+    document.querySelectorAll('th.sortable').forEach(header => {
+        header.addEventListener('click', () => {
+            const column = header.getAttribute('data-column'); // tıklanon stun
+            sortTable(column); // Sıralama işlemi
+        });
+    });
+});
+
+
+
+
+
+  </script>
+
+    
+
+</main>
+	
+<%- include('partials/footer') %>
+
+	
+
+	
+
+
+
+</body>
+</html>

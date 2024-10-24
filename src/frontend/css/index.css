@@ -1,0 +1,18 @@
+/* Tüm kaydırma çubuklarını gizleyecek CSS kodu */
+*::-webkit-scrollbar {
+    width: 0px; /* Yatay kaydırma çubuğu için */
+    height: 0px; /* Dikey kaydırma çubuğu için */
+  }
+  
+  * {
+    scrollbar-width: none; /* Firefox için kaydırma çubuğunu gizler */
+    -ms-overflow-style: none; /* IE ve Edge için kaydırma çubuğunu gizler */
+  }
+  
+
+
+/* Buton simgeleri için stil */
+.sort-button {
+  cursor: pointer;
+  font-size: 16px;
+}

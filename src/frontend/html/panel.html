@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/output.css" rel="stylesheet">
+  
+</head>
+<body>
+	
+<!-- İçerik Kısmı -->
+  <main class="flex-1 w-full relative py-12 overflow-y-auto bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+    
+	
+	
+	
+	
+	
+	
+	
+	
+    <div class="py-8 px-6 mx-auto max-w-screen-xl text-center lg:py-16">
+
+	
+		
+	
+
+
+<div class="py-2 px-1 mx-auto  text-center  relative  bg-white dark:bg-gray-900">
+
+	
+<div class="py-2 flex items-center justify-center relative">
+	<!-- Modal toggle -->
+<button data-modal-target="register-modal" data-modal-toggle="register-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Yeni Kayıt
+</button>
+	</div>
+<!-- Main modal -->
+<div id="register-modal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-auto bg-black bg-opacity-50">
+  
+	<div class="relative p-4 w-full max-w-5xl h-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Kayıt Formu
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="register-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+			
+			<!-- Modal body -->
+<div class="p-4 md:p-5 overflow-y-auto max-h-[60vh]">
+    <form class="space-y-4" action="#">
+        <!-- Fotoğraf ve T.C. Kimlik No -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="photo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fotoğraf</label>
+				<input  type="file" name="photo" id="photo" class="block w-full text-sm text-slate-500
+				  file:mr-4 file:py-2 file:px-4
+				  file:rounded-full file:border-0
+				  file:text-sm file:font-semibold
+				  file:bg-violet-50 file:text-violet-700
+				  hover:file:bg-violet-100
+				"  required/>
+			</div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tc" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">T.C. Kimlik No</label>
+                <input type="text" name="tc" id="tc" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- İsim ve Soyisim -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">İsim</label>
+                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="surname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Soyisim</label>
+                <input type="text" name="surname" id="surname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- E-posta ve Telefon Numarası -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-posta</label>
+                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefon Numarası</label>
+                <input type="text" name="tel" id="tel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Staj Başlangıç ve Bitiş Tarihleri -->
+        <div class="flex items-center justify-center">
+            <div class="px-8 py-2 w-1/2">
+                <label for="startDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Başlangıç Tarihi</label>
+                <input type="date" name="startDate" id="startDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="endDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Staj Bitiş Tarihi</label>
+                <input type="date" name="endDate" id="endDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+
+        <!-- Durum ve Gün -->
+        <div class="flex items-center justify-center">
+            <div class="px-12 py-2 w-1/2">
+                <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Durum</label>
+                <select name="status" id="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white">
+                    <option value="active">Aktif</option>
+                    <option value="inactive">Pasif</option>
+                </select>
+            </div>
+            <div class="px-8 py-2 w-1/2">
+                <label for="days" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kaç Gün</label>
+                <input type="number" name="days" id="days" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white" required />
+            </div>
+        </div>
+    </form>
+</div>
+
+			
+			
+			<div class="flex items-center justify-center py-2 px-12">
+			
+				 <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+					   Kaydet
+			</button> 
+			</div>
+			      
+        </div>
+	
+	
+        <!-- Preview section -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-full md:w-1/2">
+               
+			<h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 py-4">Önizleme</h3>
+			
+			 <div class="w-full border-t border-gray-200 dark:border-gray-600"></div>
+			
+			<div class="p-4 md:p-5 overflow-y-auto max-h-[60vh] py-4 w-full flex flex-col items-center space-y-4">
+			
+
+    <div class="w-24 h-24 rounded-full overflow-hidden">
+        <img id="preview-photo" class="w-full h-full object-cover" src="../img/pp.png" alt="pp" />
+    </div>
+    <div class="flex flex-col items-center">
+        <span id="preview-name" class="text-xl font-bold text-gray-900 dark:text-white">*******</span>
+        <span id="preview-surname" class="text-lg text-gray-700 dark:text-gray-300">*********</span>
+        <span id="preview-tc" class="text-gray-700 dark:text-gray-300">***********</span>
+    </div>
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+    
+    <!-- E-posta ve Telefon Numarası satırı -->
+    <div class="w-full flex justify-around text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>E-posta</span>
+            <span id="preview-email" class="text-gray-700 dark:text-gray-300">*****************</span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Telefon Numarası&nbsp;</span>
+            <span id="preview-tel" class="text-gray-700 dark:text-gray-300">***********</span>
+        </div>
+    </div>
+    
+    <!-- Başlangıç ve Bitiş Tarihleri satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Başlangıç</span>
+            <span id="preview-startDate" class="text-gray-700 dark:text-gray-300">************</span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Bitiş</span>
+            <span id="preview-endDate" class="text-gray-700 dark:text-gray-300">*************</span>
+        </div>
+    </div>
+    
+    <!-- Durum ve Gün satırı -->
+    <div class="w-full flex justify-around text-center text-sm text-gray-900 dark:text-white">
+        <div class="flex flex-col items-center w-1/2">
+            <span>Durum</span>
+            <span id="preview-status" class="text-gray-700 dark:text-gray-300">*********</span>
+        </div>
+        <div class="flex flex-col items-center w-1/2">
+            <span>Gün</span>
+            <span id="preview-days" class="text-gray-700 dark:text-gray-300">***********</span>
+        </div>
+    </div>
+    
+    <div class="w-full border-t border-gray-900 dark:border-gray-100"></div>
+	
+				
+			</div>
+
+			
+			
+        </div>
+    </div>
+</div>
+
+
+
+
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-center">
+                İSİM&nbsp; </th>
+				<th scope="col" class="px-6 py-3 text-center">
+                TARİH&nbsp; </th>
+                <th scope="col" class="px-6 py-3 text-center">
+                &nbsp;Staj günü</th>
+                <th scope="col" class="px-6 py-3 text-center">
+                Durum&nbsp;&nbsp; </th>
+                <th scope="col" class="px-6 py-3 text-center">&nbsp;
+                 </th>
+            </tr>
+        </thead>
+        <tbody class="overflow-y-auto">
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                  <img class="w-10 h-10 rounded-full" src="/img/pp.png" alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">****** ******&nbsp;</div>
+                        <div class="font-normal text-gray-500">*************&nbsp;</div>
+                    </div>  
+                </th>
+			<td class="px-6 py-4 text-center">
+              &nbsp;*******<div></div>********</td>
+                <td class="px-6 py-4 text-center">**/**</td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center justify-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                         Devam ediyor               </div>
+                </td>
+                <td class="px-6 py-4 text-center ">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Düzenle&nbsp;</a>
+                </td>
+            </tr>
+           
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                  <img class="w-10 h-10 rounded-full" src="/img/pp.png" alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">****** *****&nbsp;</div>
+                        <div class="font-normal text-gray-500">**********&nbsp;</div>
+                    </div>  
+                </th>
+			<td class="px-6 py-4 text-center">
+              &nbsp;*******
+              <div></div>********</td>
+                <td class="px-6 py-4 text-center">**/**</td>
+                <td class="px-6 py-4 text-center">
+                    <div class="flex items-center justify-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
+                         Bitirdi                 </div>
+                </td>
+                <td class="px-6 py-4 text-center">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Düzenle&nbsp;</a>
+                </td>
+            </tr>
+			
+        </tbody>
+    </table>
+		</div>
+
+
+
+
+
+
+
+
+    </div>
+
+	<!--Alt Bilgi-->
+<footer class="bg-white  shadow dark:bg-gray-900">
+    <div class="text-center mx-auto p-4 md:py-8">
+        <hr class="my-4 border-gray-800 sm:mx-auto dark:border-gray-800 " />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+			<a href="https://botcuk.com.tr/dev" class="hover:underline">Power By Herzane
+			</a>
+		</span>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalToggle = document.querySelector('[data-modal-toggle="register-modal"]');
+        const modal = document.getElementById('register-modal');
+        const closeModalButton = modal.querySelector('[data-modal-hide="register-modal"]');
+
+        modalToggle.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    });
+    
+    
+    function updatePreview() {
+        // Fotoğraf önizleme
+        const photoInput = document.getElementById('photo');
+        const previewPhoto = document.getElementById('preview-photo');
+        if (photoInput.files && photoInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewPhoto.src = e.target.result;
+            }
+            reader.readAsDataURL(photoInput.files[0]);
+        }
+
+        // Diğer alanların önizlemesi
+        document.getElementById('preview-name').textContent = document.getElementById('name').value;
+        document.getElementById('preview-surname').textContent = document.getElementById('surname').value;
+        document.getElementById('preview-email').textContent = document.getElementById('email').value;
+        document.getElementById('preview-tc').textContent = document.getElementById('tc').value;
+        document.getElementById('preview-tel').textContent = document.getElementById('tel').value;
+        document.getElementById('preview-startDate').textContent = document.getElementById('startDate').value;
+        document.getElementById('preview-endDate').textContent = document.getElementById('endDate').value;
+        document.getElementById('preview-status').textContent = document.getElementById('status').value;
+        document.getElementById('preview-days').textContent = document.getElementById('days').value;
+    }
+
+    document.getElementById('photo').addEventListener('change', updatePreview);
+    document.getElementById('name').addEventListener('input', updatePreview);
+    document.getElementById('surname').addEventListener('input', updatePreview);
+    document.getElementById('email').addEventListener('input', updatePreview);
+    document.getElementById('tc').addEventListener('input', updatePreview);
+    document.getElementById('tel').addEventListener('input', updatePreview);
+    document.getElementById('startDate').addEventListener('input', updatePreview);
+    document.getElementById('endDate').addEventListener('input', updatePreview);
+    document.getElementById('status').addEventListener('input', updatePreview);
+    document.getElementById('days').addEventListener('input', updatePreview);
+
+</script>	
+
+	</main>
+	
+
+
+ 
+	
+
+
+	
+
+	
+
+
+
+</body>
+</html>
