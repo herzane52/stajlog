@@ -2,8 +2,10 @@
 
 # Electron.js Stajyer takip uygulaması
 
+# Not: Bu proje tam olarak bitmemiş bir projedir.
+-Eksik kısımlar ve sorunlar bulunmaktadır bu porjeyi kendimi geliştirmek amacıyla geliştirdim tamamlamayı planlamıyorum
+-
 
-gerekli daha fazla detay eklenecek sadece kurulum ve çalıştırma kısmı eklenmiştir
 ### Önkoşullar 📜
 
 Projeyi çalıştırmak için aşağıdaki araçlara ihtiyacınız olacak:
