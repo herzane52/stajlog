@@ -37,5 +37,5 @@ npm run tailwincss
 
 
 # Yardım ve Destek 🆘
-Herhangi bir sorunla karşılaşırsanız, info@herzane.tr üzerinden ulaşabilirsiniz
+Herhangi bir sorunla karşılaşırsanız kendi başınasınız.
 
